@@ -1,5 +1,7 @@
 package com.ista.tecazuay.proyecto.models.entity;
 
-public class DocenteTutor {
+import java.io.Serializable;
+
+public class DocenteTutor implements Serializable {
 
 }

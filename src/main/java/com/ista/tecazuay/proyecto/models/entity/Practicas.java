@@ -1,5 +1,7 @@
 package com.ista.tecazuay.proyecto.models.entity;
 
-public class Practicas {
+import java.io.Serializable;
+
+public class Practicas implements Serializable{
 
 }

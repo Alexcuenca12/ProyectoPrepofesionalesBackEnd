@@ -1,5 +1,7 @@
 package com.ista.tecazuay.proyecto.models.entity;
 
-public class Coordinador {
+import java.io.Serializable;
+
+public class Coordinador implements Serializable {
 
 }

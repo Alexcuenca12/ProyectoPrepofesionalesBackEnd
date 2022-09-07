@@ -1,5 +1,7 @@
 package com.ista.tecazuay.proyecto.models.entity;
 
-public class Persona {
+import java.io.Serializable;
+
+public class Persona implements Serializable {
 
 }

@@ -1,5 +1,7 @@
 package com.ista.tecazuay.proyecto.models.entity;
 
-public class Representante {
+import java.io.Serializable;
+
+public class Representante implements Serializable{
 
 }
