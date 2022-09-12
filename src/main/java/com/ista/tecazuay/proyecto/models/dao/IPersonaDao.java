@@ -1,5 +1,9 @@
 package com.ista.tecazuay.proyecto.models.dao;
 
-public interface IPersonaDao {
+import org.springframework.data.repository.CrudRepository;
+
+import com.ista.tecazuay.proyecto.models.entity.Persona;
+
+public interface IPersonaDao extends CrudRepository<Persona, Long> {
 
 }

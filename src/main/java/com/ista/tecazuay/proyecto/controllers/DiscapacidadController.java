@@ -15,57 +15,57 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ista.tecazuay.proyecto.models.entity.DocenteTutor;
-import com.ista.tecazuay.proyecto.models.service.IDocenteTutorService;
+import com.ista.tecazuay.proyecto.models.entity.Discapacidad;
+import com.ista.tecazuay.proyecto.models.service.IDiscapacidadService;
 
 @CrossOrigin(origins = { "http://localhost:4200" })
 @RestController
 @RequestMapping("/api")
-public class DocentesTutoresController {
+public class DiscapacidadController {
 
 	@Autowired
-	private IDocenteTutorService DocenteTutorService;
+	private IDiscapacidadService DiscapacidadService;
 
 	// LISTAR
-	@GetMapping("/ListTutor")
-	public List<DocenteTutor> index() {
+	@GetMapping("/ListDiscapacidad")
+	public List<Discapacidad> index() {
 
-		return DocenteTutorService.findAll();
+		return DiscapacidadService.findAll();
 	}
 
 	// BUSCAR
-	@GetMapping("/SearchTutor/{id}")
-	public DocenteTutor show(@PathVariable Long id) {
+	@GetMapping("/SearchDiscapacidad/{id}")
+	public Discapacidad show(@PathVariable Long id) {
 
-		return DocenteTutorService.findById(id);
+		return DiscapacidadService.findById(id);
 	}
 
 	// GUARDAR
-	@PostMapping("/SaveTutor")
+	@PostMapping("/SaveDiscapacidad")
 	@ResponseStatus(HttpStatus.CREATED)
-	public DocenteTutor create(@RequestBody DocenteTutor tutor) {
+	public Discapacidad create(@RequestBody Discapacidad discapacidad) {
 
-		return DocenteTutorService.save(tutor);
+		return DiscapacidadService.save(discapacidad);
 	}
 
 	// EDITAR
-	/*@PutMapping("/EditTutor/{id}")
+	/*@PutMapping("/EditDiscapacidad/{id}")
 	@ResponseStatus(HttpStatus.CREATED)
-	public DocenteTutor update(@RequestBody DocenteTutor tutor, @PathVariable Long id) {
+	public Discapacidad update(@RequestBody Discapacidad discapacidad, @PathVariable Long id) {
 
-		DocenteTutor DocenteTutorActual = DocenteTutorService.findById(id);
-		DocenteTutorActual.setApellido(tutor.getApellido());
-		DocenteTutorActual.setNombre(tutor.getNombre());
-		DocenteTutorActual.setEmail(tutor.getEmail());
+		Discapacidad DiscapacidadActual = DiscapacidadService.findById(id);
+		DiscapacidadActual.setApellido(discapacidad.getApellido());
+		DiscapacidadActual.setNombre(discapacidad.getNombre());
+		DiscapacidadActual.setEmail(discapacidad.getEmail());
 
-		return DocenteTutorService.save(DocenteTutorActual);
+		return DiscapacidadService.save(DiscapacidadActual);
 	}*/
 
 	// ELIMINAR
-	@DeleteMapping("/DeleteTutor/{id}")
+	@DeleteMapping("/DeleteDiscapacidad/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable Long id) {
 
-		DocenteTutorService.delete(id);
+		DiscapacidadService.delete(id);
 	}
 }
