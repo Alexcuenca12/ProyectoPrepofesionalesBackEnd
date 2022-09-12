@@ -21,6 +21,7 @@ public class Discapacidad implements Serializable {
 	private String tipo_discapacidad;
 	private String porcentaje_discapacidad;
 	private Long id_persona;
+	private String hola;
 
 	public Long getId_carnet() {
 		return id_carnet;
