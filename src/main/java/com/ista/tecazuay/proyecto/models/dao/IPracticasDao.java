@@ -1,5 +1,9 @@
 package com.ista.tecazuay.proyecto.models.dao;
 
-public interface IPracticasDao {
+import org.springframework.data.repository.CrudRepository;
+
+import com.ista.tecazuay.proyecto.models.entity.Practicas;
+
+public interface IPracticasDao extends CrudRepository<Practicas, Long> {
 
 }
